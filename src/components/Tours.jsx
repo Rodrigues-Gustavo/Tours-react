@@ -1,6 +1,18 @@
-const Tours = () => {
+import Tour from './Tour'
+
+const Tours = ({ tours }) => {
   return (
-    <div>Tours</div>
+    <section>
+      <div>
+        <h2>Tours</h2>
+        <div>---------</div>
+      </div>
+      <div>
+        {tours.map((tour) => {
+          return <Tour key={tour.id} tour={tour} />
+        })}
+      </div>
+    </section>
   )
 }
 
