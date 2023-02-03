@@ -10,7 +10,10 @@ const Tour = ({ tour }) => {
           <h4>$ {price}</h4>
         </div>
         <p>
-          {info}
+          {readMore ? info : `${info.substring(0, 200)}...`}{''}
+          <button onClick={() => setReadMore(!readMore)}>
+            {readMore ? 'show less' : 'read more'}{''}
+          </button>
         </p>
         <button onClick={() => removeTours(id)}>Delete</button>
       </footer>
