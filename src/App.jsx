@@ -40,6 +40,15 @@ const App = () => {
     )
   }
 
+  if (tours.length === 0) {
+    return (
+      <main>
+        <h2>Please, click the button to refresh the page!</h2>
+        <button onClick={() => fetchTours()}>Refresh</button>
+      </main>
+    )
+  }
+
   return <main><Tours tours={tours} removeTour={removeTour} /></main>
 }
 
