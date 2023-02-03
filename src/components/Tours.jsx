@@ -1,6 +1,6 @@
 import Tour from './Tour'
 
-const Tours = ({ tours }) => {
+const Tours = ({ tours, removeTour }) => {
   return (
     <section>
       <div>
@@ -9,7 +9,7 @@ const Tours = ({ tours }) => {
       </div>
       <div>
         {tours.map((tour) => {
-          return <Tour key={tour.id} tour={tour} />
+          return <Tour key={tour.id} tour={tour}  removeTour={removeTour} />
         })}
       </div>
     </section>
