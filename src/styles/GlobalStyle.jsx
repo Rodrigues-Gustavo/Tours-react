@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         background: hsl(210, 36%, 96%);
+        background-color: #808080;
         color:  hsl(205, 86%, 17%);
         line-height: 1.5;
         font-size: 0.875rem;
