@@ -47,6 +47,16 @@ const TourInfo = styled.div`
 }
 `
 
+const Button = styled.button`
+  background: transparent;
+  border-color: transparent;
+  text-transform: capitalize;
+  color:  hsl(205, 78%, 60%);
+  font-size: 1rem;
+  cursor: pointer;
+  padding-left: 0.25rem;
+`
+
 
 const Tour = ({ tour, removeTour }) => {
   const { id, image, info, name, price } = tour
@@ -62,9 +72,9 @@ const Tour = ({ tour, removeTour }) => {
         </TourInfo>
         <p>
           {readMore ? info : `${info.substring(0, 200)}...`}{''}
-          <button onClick={() => setReadMore(!readMore)}>
+          <Button onClick={() => setReadMore(!readMore)}>
             {readMore ? 'show less' : 'read more'}{''}
-          </button>
+          </Button>
         </p>
         <button onClick={() => removeTour(id)}>Delete</button>
       </footer>
