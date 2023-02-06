@@ -24,6 +24,29 @@ const Container = styled.article`
   }
 `
 
+const TourInfo = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  h4 {
+    color: hsl(205, 78%, 60%);
+    background: hsl(205, 100%, 96%);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+`
+
 
 const Tour = ({ tour, removeTour }) => {
   const { id, image, info, name, price } = tour
@@ -33,10 +56,10 @@ const Tour = ({ tour, removeTour }) => {
     <Container>
       <img src={image} alt={name} />
       <footer>
-        <div>
+        <TourInfo>
           <h3>{name}</h3>
           <h4>$ {price}</h4>
-        </div>
+        </TourInfo>
         <p>
           {readMore ? info : `${info.substring(0, 200)}...`}{''}
           <button onClick={() => setReadMore(!readMore)}>
