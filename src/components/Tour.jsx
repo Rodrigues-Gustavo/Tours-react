@@ -57,6 +57,22 @@ const Button = styled.button`
   padding-left: 0.25rem;
 `
 
+const DeleteButton = styled.button`
+  display: block;
+  width: 200px;
+  margin: 1rem auto 0 auto;
+  color: hsl(360, 67%, 44%);
+  letter-spacing: 0.1rem;
+  background: transparent;
+  border: 1px solid hsl(360, 67%, 44%);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+
+  &:hover {
+    color: #fff;
+    background-color:  hsl(360, 67%, 44%);
+  }
+`
 
 const Tour = ({ tour, removeTour }) => {
   const { id, image, info, name, price } = tour
@@ -76,7 +92,7 @@ const Tour = ({ tour, removeTour }) => {
             {readMore ? 'show less' : 'read more'}{''}
           </Button>
         </p>
-        <button onClick={() => removeTour(id)}>Delete</button>
+        <DeleteButton onClick={() => removeTour(id)}>Delete</DeleteButton>
       </footer>
     </Container>
   )
