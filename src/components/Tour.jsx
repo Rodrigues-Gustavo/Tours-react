@@ -8,7 +8,7 @@ const Container = styled.article`
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s linear;
   &:hover {
-    box-shadow: var(--dark-shadow);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
 
   img {
@@ -21,6 +21,11 @@ const Container = styled.article`
 
   footer {
   padding: 1.5rem 2rem;
+  }
+
+  p {
+  margin-bottom: 1.25rem;
+  color: hsl(210, 22%, 49%);
   }
 `
 
@@ -40,11 +45,6 @@ const TourInfo = styled.div`
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
   }
-
-  p {
-  margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
-}
 `
 
 const Button = styled.button`
