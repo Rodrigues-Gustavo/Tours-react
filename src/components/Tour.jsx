@@ -44,6 +44,8 @@ const TourInfo = styled.div`
     background: hsl(205, 100%, 96%);
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
+    width: 6rem;
+    text-align: center;
   }
 `
 
