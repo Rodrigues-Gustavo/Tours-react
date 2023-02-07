@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import Tours from "./components/Tours";
+import Headers from "./components/Headers";
 
 const URL = 'https://course-api.com/react-tours-project'
 
@@ -34,18 +35,21 @@ const App = () => {
 
   if (loading) {
     return (
-      <main>
+      // <main>
+      //   <h2>Loading</h2>
+      // </main>
+      <Headers>
         <h2>Loading</h2>
-      </main>
+      </Headers>
     )
   }
 
   if (tours.length === 0) {
     return (
-      <main>
+      <Headers>
         <h2>Please, click the button to refresh the page!</h2>
         <button onClick={() => fetchTours()}>Refresh</button>
-      </main>
+      </Headers>
     )
   }
 

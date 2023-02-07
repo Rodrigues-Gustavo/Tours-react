@@ -1,5 +1,6 @@
 import Tour from './Tour'
 import styled from 'styled-components'
+import Headers from './Headers'
 
 const Container = styled.section`
   width: 90vw;
@@ -10,25 +11,15 @@ const Container = styled.section`
 const Header = styled.div`
   text-align: center;
   margin-bottom: 4rem;
-
-  div {
-    display: block;
-    width: 300px;
-    margin: 1rem auto 0 auto;
-    color: hsl(205, 78%, 60%);
-    letter-spacing: 0.1rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-  }
 `
 
 const Tours = ({ tours, removeTour }) => {
   return (
     <Container>
       <Header>
-      <div>
+        <Headers>
           <h2>Best places to visit!</h2>
-          </div>
+        </Headers>
       </Header>
       <div>
         {tours.map((tour) => {
